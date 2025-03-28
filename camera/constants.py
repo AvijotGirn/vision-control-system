@@ -1,0 +1,10 @@
+import numpy as np
+
+# COLOR RANGES 
+LOWER_BLUE = np.array([100,150,100])
+UPPER_BLUE = np.array([120,255,255])
+BLUE_THRESHOLD = 3000
+
+# FRAME
+MIN_WIDTH = 25
+MIN_HEIGHT = 50
