@@ -11,8 +11,8 @@ servo.freq(50)
 
 # Define PWM duty cycle ranges for continuous servo
 STOP_DUTY = 1500  # Neutral position → stop rotation
-LEFT_DUTY = 1300  # Rotate left
-RIGHT_DUTY = 1700  # Rotate right
+LEFT_DUTY = 1390  # Rotate left
+RIGHT_DUTY = 1540  # Rotate right
 
 # Function to set the servo speed/direction
 def set_servo_duty(duty_us):
