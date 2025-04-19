@@ -5,7 +5,8 @@ from utils import *
 from constants import *
 
 # UART setup
-uart = serial.Serial("/dev/serial0", baudrate=115200, timeout=1)
+# NOTE: You may need to change the serial port below, depending on what is default or setup on your Pi, mine was '/dev/serial0'
+uart = serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=1)
 last_direction = None  #reduce number of calls to uart if last direction is the same as current
 
 # Open default camera (index 0)
@@ -43,6 +44,13 @@ while True:
             if not stop_tracking:
                 direction = get_direction(cx,cy)
                 last_direction = move_servo(stop_tracking, direction, last_direction, uart)
+
+        else:
+            uart.write(("center" + "\n").encode())
+            last_direction = "center"
+    else:
+        uart.write(("center" + "\n").encode())
+        last_direction = "center"
 
     cv2.imshow("Camera Feed", frame)
     cv2.imshow("Blue Mask", mask_blue)
