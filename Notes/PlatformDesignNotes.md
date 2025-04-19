@@ -37,4 +37,4 @@
 - Is it okay to put a hex nut on the head of the servo 
 
 ## Final Design
-![Platform Design](./Images/PlatformDesign.png "Camera Platform Design Notes")
+![Platform Design](Images/PlatformDesign.png "Camera Platform Design Notes")
